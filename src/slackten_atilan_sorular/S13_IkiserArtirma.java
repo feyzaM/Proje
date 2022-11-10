@@ -6,6 +6,6 @@ public class S13_IkiserArtirma {
 
      */
     public static void main(String[] args) {
-        String str="feyza";
+
     }
 }
