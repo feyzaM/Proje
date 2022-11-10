@@ -5,4 +5,7 @@ public class S13_IkiserArtirma {
     Örnek: (12, 31, 7, 13, 10) ==> Çıktı (14, 33, 7, 15, 10)
 
      */
+    public static void main(String[] args) {
+        String str="feyza";
+    }
 }
