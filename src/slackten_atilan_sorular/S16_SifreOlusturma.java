@@ -25,8 +25,6 @@ public class S16_SifreOlusturma {
         }
         sayac = 0;
         for (int i = 0; i < ozelKarakter.length(); i++) {
-
-
             if (sifre.contains(ozelKarakter.substring(i,i+1))) {
                 sayac++;
             }
@@ -35,9 +33,9 @@ public class S16_SifreOlusturma {
             System.out.println("en az 1 sembol bulundurmali");
         }
         sayac = 0;
-        for (int i = 0; i < sifre.length(); i++) {
+        for (int i = 0; i < numara.length(); i++) {
 
-            if (sifre.contains(numara)) {
+            if (sifre.contains(numara.substring(i,i+1))) {
                 sayac++;
 
             }
