@@ -15,20 +15,20 @@ public class S06_SifreOlusturma {
       Scanner scan=new Scanner(System.in);
       System.out.println("lutfen bir sifre giriniz");
       String sifre=scan.next();
-      String sembol="/*-+,._-=?()[]&:$#";
+      String sembol="/*-+,.?=-_[]/()&+$#£";
       String numara="0123456789";
       int sayac=0;
 
       if (sifre.length()<10){
-          System.out.println("sifrenin uzunlugu => en az 10 karakter(chars) olmalidir");
+          System.out.println(" sifrenin uzunlugu => en az 10 karakter(chars) olmalidir");
       }
-
       for (int i = 0; i <sembol.length() ; i++) {
-          if (sifre.contains(sembol.substring(i,i+1)))
-          sayac++;
+          if (sifre.contains(sembol.substring(i,i+1))){
+              sayac++;
+          }
       }
       if (sayac==0){
-          System.out.println("sifre en az 1 sembol bulundurmali");
+          System.out.println("sifre en az bir sembol bulundurmali");
       }
       sayac=0;
       for (int i = 0; i <numara.length() ; i++) {
@@ -37,26 +37,25 @@ public class S06_SifreOlusturma {
           }
       }
       if (sayac==0){
-          System.out.println("sifre en az 1 numara bulundurmali");
+          System.out.println("en az 1 numara bulundurmali");
       }
       sayac=0;
       for (int i = 0; i <sifre.length() ; i++) {
-          if (sifre.charAt(i)>65 && sifre.charAt(i)<90){
-             sayac++;
+          if (sifre.charAt(i)<90 && sifre.charAt(i)>65){
+          sayac++;
           }
-
       }
       if (sayac==0){
-          System.out.println(" sifre de en az buyuk harf olmalidir");
+          System.out.println("sifrede en az bir buyuk harf olmalidir");
       }
       sayac=0;
       for (int i = 0; i <sifre.length() ; i++) {
-          if (sifre.charAt(i)>97 && sifre.charAt(i)<122){
-             sayac++;
+          if (sifre.charAt(i)<122 && sifre.charAt(i)>97){
+              sayac++;
           }
       }
       if (sayac==0){
-          System.out.println("sifre de en az bir kucuk harf olmalidir");
+          System.out.println("sifrede en az bir kucuk harf olmalidir");
       }
 
   }
